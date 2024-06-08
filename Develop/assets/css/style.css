@@ -10,7 +10,7 @@
   --dark: rgba(28, 29, 33, 1);
   --light: rgba(238, 238, 247, 1);
 }
-
+/* entire document layout */
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   background-color: var(--light);
   line-height: 1.5;
 }
-
+/* layout for all possible headings */
 h1,
 h2,
 h3,
@@ -28,11 +28,11 @@ h5,
 h6 {
   margin: 0;
 }
-
+/* layout for all paragraphs */
 p {
   margin: 0;
 }
-
+/* header style and display */
 header {
   padding: 15px 6% 15px 0;
   display: flex;
@@ -43,7 +43,7 @@ header {
   background-color: var(--tertiary);
   box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
 }
-
+/* the heading of header styling */
 header h1 {
   color: var(--tertiary);
   background-color: var(--secondary);
@@ -52,13 +52,13 @@ header h1 {
   font-size: 4vw;
   line-height: 1;
 }
-
+/* the page nav bar styling */
 nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+/* links as the children of the nav bar styling */
 nav a {
   text-decoration: none;
   padding: 5px 10px;
@@ -71,16 +71,16 @@ nav a {
   transition: all 0.25s ease-in;
   font-size: 1.4rem;
 }
-
+/* the nav bar link hover effect */
 nav a:hover {
   background-size: 100% 100%;
   color: var(--primary);
 }
-
+/* the layout for the last link of the nav bar */
 nav a:last-child {
   margin-right: 0;
 }
-
+/* the layout for the main section of body */
 main {
   margin-top: 20px;
   margin-bottom: 45px;
@@ -120,7 +120,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* style class for all doc sections */
 .page-section {
   margin: 25px 0;
   padding: 10px 0;
@@ -130,7 +130,7 @@ main {
   align-items: stretch;
   justify-content: space-between;
 }
-
+/* styling for all headings of formatted sections */
 .page-section > h2 {
   flex: 0 0 20%;
   text-align: right;
@@ -139,21 +139,21 @@ main {
   font-size: 4vw;
   line-height: 1.1;
 }
-
+/* styling for all divisions of sections */
 .page-section > div {
   flex: 0 0 77%;
 }
-
+/* styling for all paragraphs of sections */
 .page-section p {
   margin-bottom: 20px;
 }
-
+/* styling for any flex containers */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
+/* styling for any flex item under flex containers */
 .flex-item {
   border: 5px solid var(--secondary);
   background-color: var(--primary);
@@ -173,6 +173,7 @@ main {
 }
 
 /* feature first portfolio item */
+/* portfolio section */
 .flex-item:first-child {
     min-height: 400px;
     flex-basis: 100%;
@@ -190,7 +191,7 @@ main {
 .flex-item h3 {
   font-size: 1.6rem;
 }
-
+/* the address element is used for contact section*/
 .contact address {
   display: flex;
   flex-wrap: wrap;
@@ -198,7 +199,7 @@ main {
   align-items: center;
   height: 100%;
 }
-
+/* the children of address elements styling*/
 .contact address a {
   color: var(--tertiary);
   padding: 5px;
@@ -213,7 +214,7 @@ main {
   margin: 0 0.2rem 0.1rem;
   display: inline-block;
 }
-
+/* the hover effect for all links within the address area within contact */
 .contact address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
