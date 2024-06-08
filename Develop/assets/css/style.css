@@ -43,7 +43,7 @@ header {
   background-color: var(--tertiary);
   box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
 }
-/* the heading of header styling */
+/* the heading is a child of header and its styling */
 header h1 {
   color: var(--tertiary);
   background-color: var(--secondary);
