@@ -88,7 +88,7 @@ main {
 
 .hero-banner {
   background: rgb(68, 88, 120);
-  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  background-image: url("../img/profile.png"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -110,7 +110,7 @@ main {
   color: var(--tertiary);
   margin: 0;
   padding: 5px 10px;
-  font-size: 2.3rem;
+  font-size: 2.3vw; /* modify for responsive text size */
   line-height: 1.2;
   display: inline;
 }
@@ -170,10 +170,13 @@ main {
   background-size: 150%;
   transition: all 0.5s;
   font-size: 0.9rem;
+  background-repeat: no-repeat; /* add for no image repetition */
+  background-position: center; /* make the background and any associates to be centered */
 }
 
 /* feature first portfolio item */
 /* portfolio section */
+/* add background image for each child of flex-item to make sure each image is unique from flex-item as a parent*/
 .flex-item:first-child {
     min-height: 400px;
     flex-basis: 100%;
@@ -181,6 +184,7 @@ main {
 
 .flex-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer; /* add for the mouse appearance modification while hover to clickable */
 }
 
 .flex-item div {
@@ -222,9 +226,46 @@ main {
 
 /* portfolio project images */
 /* TODO: Add portfolio project images here*/
+.flex-item:nth-child(1) {
+  background-image: url("../img/portfolio1.png"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+}
+.flex-item:nth-child(2) {
+    background-image: url("../img/portfolio2.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+}
+.flex-item:nth-child(3) {
+    background-image: url("../img/portfolio3.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+}
+.flex-item:nth-child(4) {
+    background-image: url("../img/portfolio4.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+}
+.flex-item:nth-child(5) {
+    background-image: url("../img/portfolio5.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+}
 
 /* media queries */
 
 /* TODO: add media query for a max-width of 980px */
+@media screen and (max-width: 980px) {
+  .flex-container {
+    flex-direction: row;
+  }
+  .contact address {
+    flex-direction: row;
+  }
+  nav{
+    flex-direction: row;
+  }
+}
 
 /* TODO: add media query for a max-width of 768px */
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .contact address {
+    flex-direction: column;
+  }
+  nav{
+    flex-direction: column;
+  }
+}
