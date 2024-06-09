@@ -13,6 +13,7 @@
 <!-- TODO: add body content below -->
 <header>
   <h1>Yucheng Wang</h1>
+  <img src="./assets/img/profile.png" style="width:100px; text-align: center;" alt="a profile image">
   <nav>
     <a href="#about-me-section">About Me</a>
     <a href="#work-section">Work</a>
@@ -40,31 +41,31 @@
   <section id="work-section" class="page-section page-wrapper">
     <h2>Work</h2>
     <div class="flex-container">
-      <div class="flex-item" onclick="portfolio1Loc()">
+      <div id="portfolio1" class="flex-item" onclick="portfolio1Loc()" aria-label="my first portfolio">
         <div>
           <h3>Personal Website v1</h3>
           <p>HTML CSS</p>
         </div>
       </div>
-      <div class="flex-item">
+      <div class="flex-item" aria-label="my second portfolio">
         <div>
           <h3>Comming</h3>
           <p>Soon...</p>
         </div>
       </div>
-      <div class="flex-item">
+      <div class="flex-item" aria-label="my third portfolio">
         <div>
           <h3>Comming</h3>
           <p>Soon...</p>
         </div>
       </div>
-      <div class="flex-item">
+      <div class="flex-item" aria-label="my fourth portfolio">
         <div>
           <h3>Comming</h3>
           <p>Soon...</p>
         </div>
       </div>
-      <div class="flex-item">
+      <div class="flex-item" aria-label="my fifth portfolio">
         <div>
           <h3>Comming</h3>
           <p>Soon...</p>
@@ -90,7 +91,7 @@
 </footer> -->
 <script>
   function portfolio1Loc() {
-    window.location.href = "https://william-figure.github.io/mini-project/index.html"
+    window.open("https://william-figure.github.io/mini-project/index.html", "_blank");
   }
 </script>
 
