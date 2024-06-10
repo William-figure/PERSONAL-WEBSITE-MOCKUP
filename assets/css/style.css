@@ -155,8 +155,10 @@ main {
 }
 /* styling for any flex item under flex containers */
 .flex-item{
+  position: relative; /* make it the parent of the div inside it */
+  overflow: hidden; /* hide the excess part of the image */
   border: 5px solid var(--secondary);
-  background-color: var(--primary);
+  background-color: rgba(0, 0, 0, 0.3);
   color: var(--tertiary);
   min-height: 150px;
   max-height: 150px;
@@ -177,14 +179,29 @@ main {
 /* feature first portfolio item */
 /* portfolio section */
 /* add background image for each child of flex-item to make sure each image is unique from flex-item as a parent*/
+.bring-back { /* make sure the item to be fit at the back of other sibling items */
+  z-index: -1;
+}
 .flex-item:first-child{
     min-height: 400px;
     flex-basis: 100%;
 }
 
 .flex-item:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0);
   cursor: pointer; /* add for the mouse appearance modification while hover to clickable */
+}
+/* try to fill the div with the image */
+.flex-item img { 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.flex-item div {
+  position: absolute; /* make it the child of the "flex-item" */
+  background-color: var(--secondary);
+  padding: 8px 10px;
 }
 
 .flex-item div {
@@ -226,7 +243,7 @@ main {
 
 /* portfolio project images */
 /* TODO: Add portfolio project images here*/
-.flex-item:nth-child(1) {
+/* .flex-item:nth-child(1) {
   background-image: url("../img/portfolio1.png"); 
 }
 .flex-item:nth-child(2) {
@@ -240,7 +257,7 @@ main {
 }
 .flex-item:nth-child(5) {
     background-image: url("../img/portfolio5.jpg");
-}
+} */
 
 /* media queries */
 
