@@ -1,4 +1,4 @@
-# USYD-BOOTCAMP-CHALLENGE-WEEK2
+# PERSONAL-WEBSITE-MOCKUP
 
 A general mock-up for a personal webpage.
 
